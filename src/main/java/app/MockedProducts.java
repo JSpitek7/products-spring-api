@@ -6,19 +6,11 @@ import java.util.List;
 public class MockedProducts {
     public List<Product> products;
 
-    private static MockedProducts instance = null;
-    public static MockedProducts getInstance(){
-        if(instance == null){
-            instance = new MockedProducts();
-        }
-        return instance;
-    }
-
     public MockedProducts() {
-        products = new ArrayList<Product>();
-        products.add(new Product(1, "weed", 20.00, "herb"));
-        products.add(new Product(2, "grinder", 15.00, "herb"));
-        products.add(new Product(3, "cheetos",5.00, "munchies"));
+        products = new ArrayList<>();
+        products.add(new Product(1, "brake pads", 20.00, "wheels and tires"));
+        products.add(new Product(2, "brake rotors", 15.00, "wheels and tires"));
+        products.add(new Product(3, "fuel pump",5.00, "fuel system"));
     }
 
     public List<Product> fetchProducts() {
